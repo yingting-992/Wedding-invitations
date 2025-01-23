@@ -10,28 +10,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <!-- http://localhost/marry/index.html -->
-    <script>
-        function exportToExcel() {
-            // 取得表單資料
-            let name = document.querySelector("input[name='user_name']").value;
-            let email = document.querySelector("input[name='user_mail']").value;
-            let message = document.querySelector("textarea[name='message']").value;
-
-            // 創建 Excel 資料
-            let data = [
-                ["姓名", "電子郵件", "留言"],
-                [name, email, message]
-            ];
-
-            // 轉換成 Excel
-            let ws = XLSX.utils.aoa_to_sheet(data);
-            let wb = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(wb, ws, "RSVP Data");
-
-            // 下載 Excel 檔案
-            XLSX.writeFile(wb, "RSVP_Data.xlsx");
-        }
-    </script>
 </head>
 <body>
     <header>
