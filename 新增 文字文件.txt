@@ -1,0 +1,21 @@
+git init            做管理 並在C槽查看是否建成功  (查看筆記圖片)
+[到C槽git的config複製到筆記本，13-16行指令將會同步]
+git config user.email "C112156130@nkust.edu.tw"
+git config user.name "yingting-992"
+git branch -M main
+git remote add origin https://github.com/yingting-992/[儲存體名].git      將設定檔遠端儲存庫 代名為 origin
+dir 查看字串
+
+echo "[# 儲存體名]" >> README.md
+[get status]
+git add README.md 未追蹤->暫存
+git commit -m "first commit" 從暫存->本地儲存庫
+git push -u origin main 本地儲存庫->遠端儲存庫
+
+echo "# pp" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/yingting992/pp.git
+git push -u origin main
